@@ -1,0 +1,117 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Lato', sans-serif;
+}
+
+.main-heading {
+  text-align: center;
+  color: lightgrey;
+}
+
+.app-wrapper {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.time-select-wrapper,
+.player-wrapper,
+.songs-picker-wrapper {
+  height: 80%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.player-wrapper {
+  position: relative;
+}
+
+.player-wrapper svg {
+  position: absolute;
+  height: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-90deg);
+  pointer-events: none;
+}
+
+.time-display {
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  color: white;
+  font-size: 50px;
+}
+
+video {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.time-select-wrapper button,
+.songs-picker-wrapper button {
+  outline: 0;
+  color: white;
+  width: 30%;
+  padding: 15px;
+  background: none;
+  border: 2px solid white;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 20px;
+  transition: all ease-in 0.5s;
+}
+
+.time-select-wrapper button:hover,
+.time-select-wrapper button:focus,
+.time-select-wrapper button:active {
+  color: black;
+  background-color: white;
+}
+
+.songs-picker-wrapper button {
+  border: none;
+  width: 120px;
+  height: 120px;
+  padding: 0 30px;
+  border-radius: 50%;
+  transition: all ease-in-out 0.3s;
+}
+
+.songs-picker-wrapper button:nth-child(1) {
+  background: #ff1616;
+}
+
+.songs-picker-wrapper button:nth-child(1):hover,
+.songs-picker-wrapper button:nth-child(1):focus,
+.songs-picker-wrapper button:nth-child(1):active {
+  background: #bc1919;
+}
+
+.songs-picker-wrapper button:nth-child(2) {
+  background: #11a5ff;
+}
+
+.songs-picker-wrapper button:nth-child(2):hover,
+.songs-picker-wrapper button:nth-child(2):focus,
+.songs-picker-wrapper button:nth-child(2):active {
+  background: #0e7bbe;
+}
+
+.songs-picker-wrapper button img {
+  max-width: 100%;
+  height: 100%;
+}
